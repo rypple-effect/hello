@@ -70,7 +70,7 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href="./resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors"

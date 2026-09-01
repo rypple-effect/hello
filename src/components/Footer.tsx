@@ -3,7 +3,7 @@ const CONNECT = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/rcgalaban" },
   { label: "GitHub", href: "https://github.com/rypple-effect" },
   { label: "Email", href: "mailto:galabanry@outlook.com" },
-  { label: "Resume", href: "./resume.pdf" },
+  { label: "Resume", href: `${import.meta.env.BASE_URL}resume.pdf` },
 ];
 
 export default function Footer() {

@@ -28,6 +28,15 @@ npm run build
 npm run preview
 ```
 
+## GitHub Pages Deployment
+
+This repository is configured for automatic deployment to GitHub Pages via GitHub Actions:
+
+1. In your GitHub repository, go to **Settings** > **Pages**.
+2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+3. Pushing commits to the `main` branch will automatically trigger `.github/workflows/deploy.yml` to build and deploy the site.
+4. You can also manually trigger a deployment from the **Actions** tab by selecting **Deploy to GitHub Pages** > **Run workflow**.
+
 ## Project structure
 
 ```

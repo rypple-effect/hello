@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Ryan Galaban</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background: #0f131a;
+      --foreground: #f7f7f7;
+      --primary: #1ad1ff;
+      --muted: #8892a4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .container {
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 1rem;
+      padding: 3rem 2rem;
+      box-shadow: 0 0 30px rgba(0, 210, 255, 0.08);
+    }
+    h1 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 24px rgba(0, 210, 255, 0.3);
+    }
+    h2 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      background: rgba(0, 210, 255, 0.1);
+      color: var(--foreground);
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      padding: 0.75rem 1.75rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      background: rgba(0, 210, 255, 0.2);
+      border-color: var(--primary);
+      box-shadow: 0 0 16px rgba(0, 210, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>The requested route does not exist or has been moved.</p>
+    <a id="home-link" href="./">Return to Homepage</a>
+  </div>
+  <script>
+    const pathname = window.location.pathname;
+    const isRepoSubpath = pathname.includes('/mypage');
+    if (isRepoSubpath) {
+      document.getElementById('home-link').setAttribute('href', '/mypage/');
+    }
+  </script>
+</body>
+</html>
